@@ -1,0 +1,101 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+nav.scrolled {
+  background-color: #222;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: white;
+  color: #333;
+  border-radius: 4px;
+}
+
+
+.section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  padding-top: 120px;
+  color: #fff;
+}
+
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+#home {
+  background: linear-gradient(135deg, #6a11cb, #d125fc); /* Purple-Blue */
+}
+
+#features {
+  background: linear-gradient(135deg, #ff6a00, #ee0979); /* Orange-Pink */
+}
+
+#about {
+  background: linear-gradient(135deg, #00c9ff, #92fe9d); /* Blue-Green */
+}
+
+#contact {
+  background: linear-gradient(135deg, #f7971e, #ffd200); /* Yellow-Orange */
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    display: none;
+  }
+}
